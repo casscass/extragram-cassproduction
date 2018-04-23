@@ -18,9 +18,13 @@
 
     </div>
 
-     <div class='body'>
-      <%= image_path 'world_of_engineering.jpeg'%>
-       <%= image_tag 'world_of_engineering.jpeg'%>
+  
+    <div class='body'>
+      <%= image_tag "/posts/#{@posts.image_file_name}" %>
+    </div>
+
+      // <%= image_path 'world_of_engineering.jpeg'%>
+      //  <%= image_tag 'world_of_engineering.jpeg'%>
       <div>Image</div>
 
       <div>
