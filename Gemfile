@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 gem 'bootstrap', '~> 4.0.0'
+gem 'carrierwave', '~> 1.0'
+gem "fog-aws"
 
 gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
