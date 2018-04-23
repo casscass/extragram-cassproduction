@@ -8,7 +8,7 @@
 # byebug
 if Rails.env.development? then
     User.destroy_all # vs. .delete_all
-    user = User.create! username: 'world_of_engineering', email: 'world_of_engineering@example.com', password:'123'
+    user = User.create! username: 'world_of_engineering', email: 'world_of_engineering@example.com', password:'password', password_confirmation:'password'
     user.posts.create! description: 'world_of_engineering Industry Architecture #engineering'
 end
 

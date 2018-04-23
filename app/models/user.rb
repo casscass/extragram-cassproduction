@@ -1,6 +1,17 @@
 class User < ApplicationRecord
   has_secure_password
   has_many :posts
+
+  has_many :likes
+  #has_many :liked_posts through: :likes
+  has_many :liked_posts, through: :likes, source: :post
+
+  has_many :followings # join table
+  has_many :followers, through: :followings # source :follower
+  
+  # has_many :followers, through: :followings, source: :follower
+  has_many :reverse_followings, class_name: 'Following', foreign_key: 'follower_id' #join table 
+  has_many :followers, through: :reverse_followings # source :followee
 end
 
 # user = User.new(username: 'david', password: '', password_confirmation: 'nomatch')
